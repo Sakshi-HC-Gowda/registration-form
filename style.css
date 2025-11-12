@@ -1,0 +1,179 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e6e6fa, #d8bfd8);
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* ---------- FORM CARD CONTAINER ---------- */
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(80, 50, 120, 0.25);
+  padding: 45px 40px;
+  width: 430px;
+  max-width: 90%;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Subtle float effect */
+.container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(80, 50, 120, 0.35);
+}
+
+/* ---------- HEADING ---------- */
+h1 {
+  text-align: center;
+  color: #5a189a;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  text-shadow: 1px 1px 2px rgba(90, 24, 154, 0.1);
+}
+
+/* ---------- LABELS ---------- */
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #4b0082;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ---------- INPUTS, SELECTS & TEXTAREAS ---------- */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1.6px solid #c3aed6;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #faf6ff;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus effects */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+  background: #fff;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8a2be2, #7b68ee);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.25);
+}
+
+/* Hover animation */
+button:hover {
+  background: linear-gradient(135deg, #7b68ee, #6a5acd);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 90, 205, 0.35);
+}
+
+/* ---------- SUCCESS PAGE STYLING (submit.php) ---------- */
+.container p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #4b0082;
+}
+
+.container a button {
+  width: auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- PLACEHOLDER STYLE ---------- */
+::placeholder {
+  color: #9b9b9b;
+  font-style: italic;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 480px) {
+  body {
+    background: #e6e6fa;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+/* ---------- BACKGROUND PARTICLES ---------- */
+.background-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Each particle (circle) */
+.particle {
+  position: absolute;
+  background: rgba(186, 85, 211, 0.25); /* soft lavender shade */
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Bring the form card above the floating background */
+.container {
+  position: relative;
+  z-index: 1;
+}
