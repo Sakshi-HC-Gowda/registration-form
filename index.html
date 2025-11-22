@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="background-particles" aria-hidden="true"></div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h1>Student Registration</h1>
+
+      <form id="regForm" autocomplete="off">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="mobile">Mobile</label>
+        <input id="mobile" name="mobile" type="text" inputmode="numeric" required />
+
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" required />
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label for="course">Course</label>
+        <input id="course" name="course" type="text" required />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="pic">Profile Picture</label>
+        <input id="pic" name="pic" type="file" accept="image/*" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- output box -->
+    <div id="resultBox" aria-live="polite">
+      <h2>Submitted Information</h2>
+      <div id="resultData"></div>
+      <img id="previewImg" alt="Profile preview" />
+    </div>
+  </div>
+
+  <!-- Put JS at the end so DOM is ready -->
+  <script src="script.js"></script>
+</body>
+</html>
